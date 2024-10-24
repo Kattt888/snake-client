@@ -17,6 +17,21 @@ const handleUserInput = (key) => {
   if (key === 'd') {
     connection.write("Move: right");
   }
+
+  // Sending messages to the server
+  if (key === '1') {
+    connection.write("Say: I got this!!"); 
+  }
+  if (key === '2') {
+    connection.write("Say: You can't beat me!"); 
+  
+    if (key === '3') {
+    connection.write("Say: BOOOM!"); 
+  }
+  if (key === '4') {
+    connection.write("Say: Better luck next time!"); 
+  }
+
 };
 
 const setupInput = (conn) => {
