@@ -1,11 +1,3 @@
-const { connect } = require('./client'); // Import the connect function from client.js
-const { setupInput } = require("./input");
-
-console.log("Connecting ...");
-connect(); // Use the connect function from client.js
-
-// setup interface to handle user input from stdin
-
 const setupInput = function () {
   const stdin = process.stdin;  // create variable to hold the stdin object so we don't have to type process.stdin multiple times
   stdin.setRawMode(true); // Raw Mode allows us to listen for individual keypresses instead of waiting for the user to press enter
