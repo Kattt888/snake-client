@@ -18,7 +18,11 @@ const connect = function () {
     console.log("Successfully connected to game server!"); // Print success message
  
   conn.write("Name: KNB");//adding initials for name here
-  });
+  
+  //setTimeout(() => { //setTimeout because initials and move were concatenated!
+  //conn.write("Move: up");//move snake up command
+  //}, 50);//50 ms delay
+});
 
   return conn;
 };
