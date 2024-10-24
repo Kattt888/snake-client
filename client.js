@@ -4,7 +4,7 @@ const net = require("net");
 const connect = function () {
   const conn = net.createConnection({
     host: "localhost", // IP address here
-    port: 50541 // PORT number here
+    port: 3000 // PORT number here
   });
 
   // interpret incoming data as text
@@ -12,6 +12,12 @@ const connect = function () {
 
   conn.on("data", (data) => {
     console.log("Hello", data);
+  });
+
+  conn.on("connect", () => {
+    console.log("Successfully connected to game server!"); // Print success message
+ 
+  conn.write("Name: KNB");//adding initials for name here
   });
 
   return conn;
